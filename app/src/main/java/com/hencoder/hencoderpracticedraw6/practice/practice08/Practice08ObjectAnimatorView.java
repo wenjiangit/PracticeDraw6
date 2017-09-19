@@ -11,6 +11,7 @@ import android.view.View;
 
 import static com.hencoder.hencoderpracticedraw6.Utils.dpToPixel;
 
+@SuppressWarnings("unused")
 public class Practice08ObjectAnimatorView extends View {
     final float radius = dpToPixel(80);
 
@@ -30,6 +31,15 @@ public class Practice08ObjectAnimatorView extends View {
 
     public Practice08ObjectAnimatorView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+    }
+
+    public void setProgress(float progress) {
+        this.progress = progress;
+        invalidate();
+    }
+
+    public float getProgress() {
+        return progress;
     }
 
     {
